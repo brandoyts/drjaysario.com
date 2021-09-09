@@ -47,7 +47,13 @@ export default function Contact() {
                             <span className="rounded-full bg-white inline-flex flex-col justify-center items-center w-15 h-15 p-1">
                                 <FaLinkedin className="h-10 w-10 text-blue-500" />
                             </span>
-                            <span>jaysario</span>
+                            <a
+                                href="https://www.linkedin.com/in/jayasario-08201978/?fbclid=IwAR3C-lgOmnugxg1isHbfCWLHQLAoMjj6V5am8mInl99PmdFScm8xIfpv7lA"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                jaysario
+                            </a>
                         </li>
                         <li className="flex items-center justify-center gap-2">
                             <span className="rounded-full bg-white inline-flex flex-col justify-center items-center w-15 h-15 p-1">
@@ -66,7 +72,9 @@ export default function Contact() {
                             <span className="rounded-full bg-white inline-flex flex-col justify-center items-center w-15 h-15 p-1">
                                 <FaWhatsapp className="h-10 w-10 text-blue-500" />
                             </span>
-                            <span>docjaysario@gmail.com</span>
+                            <a href="mailto: docjaysario@gmail.com">
+                                docjaysario@gmail.com
+                            </a>
                         </li>
                         <li className="flex items-center justify-center gap-2">
                             <span className="rounded-full bg-white inline-flex flex-col justify-center items-center w-15 h-15 p-1">

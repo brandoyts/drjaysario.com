@@ -7,6 +7,11 @@ export default function handler(req, res) {
     fs.readFile(
         path.join(process.cwd(), "public", "assets", "docs", `${fileName}.pdf`),
         (err, data) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+
             res.setHeader("Content-Type", "application/pdf");
             res.setHeader(
                 "Content-Disposition",

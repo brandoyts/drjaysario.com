@@ -17,14 +17,4 @@ export default function handler(req, res) {
 
     res.setHeader("Content-Type", "application/pdf");
     res.send(fileBuffer);
-
-    // const stat = fs.statSync(filePath);
-
-    // res.writeHead(200, {
-    //     "Content-Type": "application/pdf",
-    //     "Content-Length": stat.size,
-    // });
-
-    // const readStream = fs.createReadStream(filePath);
-    // readStream.pipe(res);
 }

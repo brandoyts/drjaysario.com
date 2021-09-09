@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 export default function handler(req, res) {
-    // const { fileName } = req.query;
+    const { fileName } = req.query;
     // const filePath = path.join(
     //     ROOT_DIR,
     //     "public",
@@ -17,9 +17,8 @@ export default function handler(req, res) {
     // res.send(fileBuffer);
 
     fs.readFile(
-        path.join(process.cwd(), "public", "assets", "docs", "Gratitude.pdf"),
+        path.join(process.cwd(), "public", "assets", "docs", `${fileName}.pdf`),
         (err, data) => {
-            console.log("testsi");
             res.setHeader("Content-Type", "application/pdf");
             res.send(data);
         }

@@ -8,6 +8,11 @@ export default function handler(req, res) {
         path.join(process.cwd(), "public", "assets", "docs", `${fileName}.pdf`),
         (err, data) => {
             res.setHeader("Content-Type", "application/pdf");
+            res.setHeader(
+                "Content-Disposition",
+                `attachment; filename=${fileName}.pdf`
+            );
+
             res.send(data);
         }
     );

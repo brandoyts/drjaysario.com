@@ -13,13 +13,18 @@ export default function handler(req, res) {
         `${fileName}.pdf`
     );
 
-    const stat = fs.statSync(filePath);
+    const fileBuffer = fs.readFileSync(filePath);
 
-    res.writeHead(200, {
-        "Content-Type": "application/pdf",
-        "Content-Length": stat.size,
-    });
+    res.setHeader("Content-Type", "application/pdf");
+    res.send(fileBuffer);
 
-    const readStream = fs.createReadStream(filePath);
-    readStream.pipe(res);
+    // const stat = fs.statSync(filePath);
+
+    // res.writeHead(200, {
+    //     "Content-Type": "application/pdf",
+    //     "Content-Length": stat.size,
+    // });
+
+    // const readStream = fs.createReadStream(filePath);
+    // readStream.pipe(res);
 }

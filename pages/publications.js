@@ -89,6 +89,7 @@ export default function Publications() {
                                 <a
                                     className="p-2 w-full text-center text-lg bg-red-700 text-white"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Download PDF
                                 </a>

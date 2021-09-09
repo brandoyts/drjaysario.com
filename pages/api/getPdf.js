@@ -19,8 +19,9 @@ export default function handler(req, res) {
     fs.readFile(
         path.join(process.cwd(), "public", "assets", "docs", "Gratitude.pdf"),
         (err, data) => {
+            console.log("testsi");
             res.setHeader("Content-Type", "application/pdf");
-            res.send(data);
+            res.download(data);
         }
     );
 }
